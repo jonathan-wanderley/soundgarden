@@ -1,4 +1,6 @@
-fetch('https://xp41-soundgarden-api.herokuapp.com/events')
+try {
+    
+    fetch('https://xp41-soundgarden-api.herokuapp.com/events')
     .then(data => data.json())
     .then(eventos => {
         eventos.forEach(evento => {
@@ -78,3 +80,7 @@ fetch('https://xp41-soundgarden-api.herokuapp.com/events')
             document.getElementById('boxEventos').append(eventoModel);
         });
     })
+
+} catch (error) {
+    console.log(error);
+}
