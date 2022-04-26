@@ -71,7 +71,7 @@ button.addEventListener('click', (e) => {
             }
 
             alert('Editado com sucesso!'); //Mostra um alerta de sucesso
-            window.location.href = "/admin.html"; //Redireciona para a pagina admin.html
+            window.location.href = "admin.html"; //Redireciona para a pagina admin.html
         })
         .catch(error => {
             //Mostra um alerta informando erro e printa no console o erro
