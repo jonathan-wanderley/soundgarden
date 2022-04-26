@@ -1,0 +1,60 @@
+.modalBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.836);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalJanela {
+    position: relative;
+    width: 700px;
+    background-color: #fff;
+    padding: 25px;
+    max-height: 600px;
+}
+.modalJanela span {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: rgb(131, 14, 14);
+    font-weight: 800;
+    cursor: pointer;
+}
+.modalJanela .modalTable {
+    width: 100%;
+}
+.divTable {
+    overflow-y: auto;
+    height: 400px;
+}
+.modalJanela .modalTable thead th {
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid black;
+}
+.modalJanela .modalTable tbody tr {
+    border-bottom: 1px solid #a1a1a157;
+}
+.modalJanela .modalTable tbody tr td{
+    padding: 10px 0 10px 5px;
+}
+.modalJanela .modalTable tbody tr th {
+    padding-left: 5px;
+}
+
+
+/* SCROLL DO MODAL  */
+.divTable::-webkit-scrollbar {
+    width: 12px;
+}
+.divTable::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+.divTable::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
