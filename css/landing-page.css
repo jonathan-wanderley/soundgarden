@@ -69,6 +69,15 @@
     
 }
 
+@media screen and (max-width: 575px) {
+    main > section:nth-child(3) > div > div > div:nth-child(1) {
+        text-align: center;
+    }
+    main > section.full.d-flex.justify-content-center.align-items-center > div > div > div:nth-child(1) {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 380px) {
     article.evento {
         width: 100%;
@@ -82,12 +91,6 @@
     }
     footer > div nav ul {
         padding: 0 !important;
-        text-align: center;
-    }
-    main > section:nth-child(3) > div > div > div:nth-child(1) {
-        text-align: center;
-    }
-    main > section.full.d-flex.justify-content-center.align-items-center > div > div > div:nth-child(1) {
         text-align: center;
     }
 }
