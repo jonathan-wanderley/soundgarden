@@ -19,13 +19,13 @@ fetch("https://xp41-soundgarden-api.herokuapp.com/events")
             //>> O insertCell usado abaixo pega a linha criada e insere os dados no indice/coluna especificado
             //Data
             //insere na coluna com indice 1 a data que formatamos e a hora(usamos substring pra cortar apenas a hora da data recebida no json)
-            linha.insertCell(1).innerHTML = `${dataFormatada} ${evento.scheduled.substring(11, 16)}`;
+            linha.insertCell(1).innerText = `${dataFormatada} ${evento.scheduled.substring(11, 16)}`;
             //Titulo
-            linha.insertCell(2).innerHTML = evento.name;
+            linha.insertCell(2).innerText = evento.name;
             //Atracoes
             //Attractions é um array, usamos o join pra pegar cada item do array
             //e separar usando o parametro passado, nesse caso separamos os itens por ", "
-            linha.insertCell(3).innerHTML = evento.attractions.join(', ');
+            linha.insertCell(3).innerText = evento.attractions.join(', ');
 
             // // Botao ver reservas
             const botaoVerReservas = document.createElement('a'); //Criamos um elemento a (botao)
@@ -85,9 +85,9 @@ async function listarReservas(id) {
         const pk = document.createElement('th'); //Cria a primeira coluna da linha onde fica o numero
         pk.innerHTML = index+1 //Seta o valor do numero pelo indice
         linha.append(pk) //Adiciona a primeira coluna na linha
-        linha.insertCell(1).innerHTML = reserva.owner_name; //Seleciona a segunda coluna e insere o nome
-        linha.insertCell(2).innerHTML = reserva.owner_email; //Seleciona a terceira coluna e insere o email
-        linha.insertCell(3).innerHTML = reserva.number_tickets; //Seleciona a quarta coluna e insere a qnt de tickets
+        linha.insertCell(1).innerText = reserva.owner_name; //Seleciona a segunda coluna e insere o nome
+        linha.insertCell(2).innerText = reserva.owner_email; //Seleciona a terceira coluna e insere o email
+        linha.insertCell(3).innerText = reserva.number_tickets; //Seleciona a quarta coluna e insere a qnt de tickets
     })
 }
 
@@ -118,7 +118,7 @@ function closeModal() {
     themail.innerText = "Email";
     themail.setAttribute("scope", "col")
     const thtickets = document.createElement('th'); //Cria a coluna2 no cabecalho com a qnt de tickets
-    thtickets.innerText = "Qnt de Tickets";
+    thtickets.innerText = "Tickets";
     thtickets.setAttribute("scope", "col")
     
     //Adiciona as colunas criadas na linha, mas a linha ainda nao foi adicionada no HTML

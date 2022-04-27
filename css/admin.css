@@ -15,6 +15,7 @@
     background-color: #fff;
     padding: 25px;
     max-height: 600px;
+    margin: 10px;
 }
 .modalJanela span {
     position: absolute;
@@ -28,7 +29,6 @@
     width: 100%;
 }
 .divTable {
-    overflow-y: auto;
     height: 400px;
 }
 .modalJanela .modalTable thead th {
@@ -44,6 +44,12 @@
 .modalJanela .modalTable tbody tr th {
     padding-left: 5px;
 }
+.modalTable td,
+.table td {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
 
 
 /* SCROLL DO MODAL  */
@@ -57,4 +63,45 @@
     background-color: #aaaaaa;
     border-radius: 20px;
     border: 3px solid #ffffff;
+}
+
+.btn {
+    margin: 1px;
+}
+
+@media screen and (max-width: 945px) {
+    .p-5 {
+        padding: 4rem 1.2rem !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .p-5 {
+        padding: 5.3rem 1.2rem !important;
+    }
+}
+@media screen and (max-width: 619px) {
+    /* .bd-example {
+        overflow: auto;
+    } */
+    .table thead tr th:nth-child(2),
+    .table thead tr th:nth-child(4),
+    .table tbody tr td:nth-child(2),
+    .table tbody tr td:nth-child(4){
+        display: none;
+    }
+}
+@media screen and (max-width: 343px) {
+    .table thead tr th:nth-child(1),
+    .table tbody tr th:nth-child(1){
+        display: none;
+    }
+    .table .btn {
+        font-size: 14px !important;
+    }
+    main > .my-5 > h1 {
+        text-align: center;
+    }
+    main > .my-5 > a{
+        width: 100%;
+    }
 }
