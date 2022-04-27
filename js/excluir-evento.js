@@ -13,12 +13,17 @@ const lotacao = document.querySelector('#lotacao');
 fetch("https://xp41-soundgarden-api.herokuapp.com/events")
     .then(data => data.json()) //Pega o resultado e transforma em json
     .then(eventos => { //Agora temos a nossa lista de eventos em json que chamei de 'eventos'
-        eventos.forEach(evento => { //Roda o forEach percorrendo evento por evento dentro da lista
+        
+        const eventoFiltrado = eventos.filter((evento) => {
+            return evento._id == id;
+        })
+        if(eventoFiltrado.length == 0) {
+            alert("Id de evento invalido!");
+            window.location.href = "admin.html";
+        }
+        
+        eventoFiltrado.forEach(evento => { //Roda o forEach percorrendo evento por evento dentro da lista
             if(evento._id == id) { //Verifica se o id do evento atual percorrido é igual ao id que queremos excluir
-
-                //Formata a data pro padrao local dd/mm/yyyy
-                const dataN = new Date(evento.scheduled);
-                const dataFormatada = dataN.toLocaleDateString();
 
                 //Substitui os inputs/campos com o valor do evento achado por id(que foi recebido por parametro)
                 nome.value = evento.name;
